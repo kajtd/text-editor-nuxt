@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tiptap {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  outline: none;
+}
+
+.tiptap p {
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+}
+
+.tiptap h1 {
+  font-size: 2rem;
+}
+
+.tiptap h2 {
+  font-size: 1.75rem;
+}
+
+.tiptap h3 {
+  font-size: 1.5rem;
+}
+
+.tiptap h4 {
+  font-size: 1.25rem;
+}
+
+.tiptap h5 {
+  font-size: 1rem;
+}
+
+.tiptap h6 {
+  font-size: 0.875rem;
+}
+
+.tiptap ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.tiptap ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.tiptap ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.tiptap blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #666;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.tiptap ul,
+.tiptap ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+.tiptap li {
+  margin-bottom: 0.5rem;
+}
+
+.tiptap p code {
+  color: rgb(231, 41, 161);
+  background: #fcf8f8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.tiptap pre {
+  background-color: #fcf8f8cc;
+  border-radius: 6px;
+  margin: 1em 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.tiptap pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #24292e;
+}
+
+.tiptap hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+.tiptap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.tiptap a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.tiptap a:hover {
+  text-decoration: underline;
+}
+
+.tiptap p.is-empty::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror-selectednode img {
+  border: 2px solid #f15bff;
+}
+
+/* Syntax highlighting */
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #d73a49;
+}
+
+.hljs-string,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable {
+  color: #032f62;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #005cc5;
+}
+
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-symbol {
+  color: #e36209;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #22863a;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-tag,
+.hljs-name {
+  color: #6f42c1;
+}
+
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: #6f42c1;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-addition {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.hljs-deletion {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
