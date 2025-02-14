@@ -47,6 +47,7 @@ const exportDocument = () => {
     console.error("Error during export:", error);
   }
 };
+
 const convertToMarkdown = (json: JSONContent): string => {
   let markdown = "";
 
@@ -63,7 +64,8 @@ const convertToMarkdown = (json: JSONContent): string => {
         return processListItems(node.content, "- ") + "\n";
       case "orderedList":
         return (
-          processListItems(node.content, (index) => `${index + 1}. `) + "\n"
+          processListItems(node.content, (index: number) => `${index + 1}. `) +
+          "\n"
         );
       case "listItem":
         return processContentNodes(node.content).trim();
@@ -73,17 +75,20 @@ const convertToMarkdown = (json: JSONContent): string => {
         return `\`\`\`${language}\n${code}\n\`\`\`\n\n`;
       case "blockquote":
         return (
-          node.content?.map((n) => `> ${processNode(n)}`).join("") + "\n\n"
+          node.content?.map((n: any) => `> ${processNode(n)}`).join("") + "\n\n"
         );
       case "horizontalRule":
         return "___\n\n";
-      case "imageUpload":
+      case "imageEditor": {
         const { src, alt, caption } = node.attrs as {
           src: string;
           alt?: string;
           caption?: string;
         };
-        return `![${alt || ""}](${src} "${caption || ""}")\n\n`;
+        return src
+          ? `![${alt || "Image"}](${src}${caption ? ` "${caption}"` : ""})\n\n`
+          : "";
+      }
       default:
         return "";
     }
