@@ -139,10 +139,6 @@
   pointer-events: none;
 }
 
-.ProseMirror-selectednode img {
-  border: 2px solid #f15bff;
-}
-
 /* Syntax highlighting */
 .hljs-comment,
 .hljs-quote {

@@ -55,7 +55,7 @@ greet('Hello world 🎈');</code></pre>
 <h2>Image</h2>
 
 <p>Here's an example of an image:</p>
-<image-upload src="https://picsum.photos/800/400" alt="Random image from Unsplash" caption="Image from picsum.photos"></image-upload>
+<div data-type="image-editor" src="https://picsum.photos/800/400"></div>
 
 <h2>Horizontal Rule</h2>
 

@@ -99,18 +99,18 @@ const items: SuggestionItem[] = [
   },
   {
     name: "Image",
-    description: "Upload an image.",
+    description: "Edit an image",
     icon: "mdi:image",
     command: ({ editor, range }) => {
       editor
         .chain()
         .focus()
         .deleteRange(range)
-        .insertContent("<image-upload></image-upload>")
+        .insertContent({
+          type: "imageEditor",
+          attrs: {},
+        })
         .run();
-
-      editor.commands.setTextSelection(editor.state.selection.to);
-      editor.commands.blur();
     },
   },
   {

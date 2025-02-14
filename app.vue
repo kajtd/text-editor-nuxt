@@ -15,12 +15,12 @@ import { common, createLowlight } from "lowlight";
 import Placeholder from "@tiptap/extension-placeholder";
 import Commands from "~/extensions/Commands";
 import suggestion from "~/extensions/Suggestion";
-import ImageUpload from "~/extensions/ImageUpload";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import CodeBlock from "./components/CodeBlock.vue";
 import Image from "@tiptap/extension-image";
 import ExportButtons from "~/components/ExportButtons.vue";
 import { initialContent } from "~/data/initialContent";
+import { ImageEditorNode } from "~/extensions/ImageEditor";
 
 const lowlight = createLowlight(common);
 
@@ -35,7 +35,7 @@ const editor = useEditor({
     Color,
     Image,
     TextStyle,
-    ImageUpload,
+    ImageEditorNode,
     CodeBlockLowlight.extend({
       addNodeView() {
         return VueNodeViewRenderer(CodeBlock);

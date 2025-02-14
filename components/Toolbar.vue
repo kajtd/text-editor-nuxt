@@ -136,7 +136,7 @@ const shouldShow = (props: {
   if (empty) return false;
 
   const nodeAtSelection = doc.nodeAt(from);
-  if (nodeAtSelection && nodeAtSelection.type.name === "imageUpload") {
+  if (nodeAtSelection && nodeAtSelection.type.name === "imageEditor") {
     return false;
   }
 
